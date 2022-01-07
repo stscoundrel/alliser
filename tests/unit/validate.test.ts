@@ -26,7 +26,7 @@ describe('Alliser validation flow tests', () => {
     alliser.validate(['.ts'], ['tests']);
 
     // Exit code.
-    expect(mockExit).toHaveBeenCalledWith(666);
+    expect(mockExit).toHaveBeenCalledWith(1);
 
     // Logs.
     expect(mockConsoleError).toHaveBeenCalledWith('Alliser found errors: following files are not allowed formats (.ts)');
