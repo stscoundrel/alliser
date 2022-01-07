@@ -18,7 +18,7 @@ export const validate = (extensions: string[], folders: string[]): void => {
   } else {
     console.error(`Alliser found errors: following files are not allowed formats (${extensions.join(', ')})`);
     console.error(incorrects.join('\n'));
-    process.exit(666);
+    process.exit(1);
   }
 };
 
