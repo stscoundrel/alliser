@@ -2,15 +2,16 @@
 
 Detect & list not allowed file extensions in a project. Scans project & compares findings against list of allowed filetypes.
 
+### Install
+
+`yarn add alliser`
+
 ### Motivation
 
 In some project setups, one can use incorrect file extension without actually breaking the project. An example of this would be a TypeScript project, where one accidentally writes Jest test-files in .js instead of .ts. Jest allows that, and project gets randomly littered with .js files that do work. Or maybe you just want to let team members know, that a particular filetype or programming language is discouraged.
 
 Alliser goes through files, and lets you know if you have non-allowed file types within the project.
 
-### Install
-
-`yarn add alliser`
 
 ### Usage
 
