@@ -2,6 +2,8 @@
 
 Detect & list not allowed file extensions in a project. Scans project & compares findings against list of allowed filetypes.
 
+Also available for your CI as batteries included [Github Action](https://github.com/marketplace/actions/alliser-action).
+
 ### Install
 
 `yarn add alliser`
