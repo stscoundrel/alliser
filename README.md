@@ -14,6 +14,12 @@ In some project setups, one can use incorrect file extension without actually br
 
 Alliser goes through files, and lets you know if you have non-allowed file types within the project.
 
+#### Wait, can't I do this with gitignore?
+
+Depending on your use case, you might! There are differences though.
+
+Gitignore is commonly used for completely blocking something from your repo. Things in there are artifacts you _dont want_ in repo, maybe dist, builds or external deps. Things that Alliser checks are things you _do want_ in your repo, like source code / tests you've written, but they may be of incorrect or discouraged format.
+
 
 ### Usage
 
@@ -74,6 +80,6 @@ console.log(incorrectFiles);
 Alliser is smart enough not to list files from folders like `node_modules` or `.git`. If you feel like some common ignore is missing from defaults, PRs & issues are welcome.
 
 
-#### What's in the name?
+### What's in the name?
 
 "Alliser" is picked from GRR Martins "A Song Of Ice And Fire". Alliser Thorne is a character who would definitely tell you if you're of "the wrong type".
