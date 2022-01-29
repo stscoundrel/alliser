@@ -1,4 +1,5 @@
 import finder from '../../src/finder';
+import { getDefaultIgnores } from '../../src/ignores';
 
 describe('Finder tests', () => {
   test('Lists subfolders & files in a folder', () => {
@@ -35,5 +36,15 @@ describe('Finder tests', () => {
     const result = finder.listFilesinFolders(folders);
 
     expect(result).toEqual(expected);
+  });
+
+  test('Does not list ignored folders', () => {
+    // Scanning top level could result in node_modules etc loops.
+    const results = finder.listFilesinFolders(['.']);
+
+    // Assert ignores were not scanned in the first place.
+    results.forEach((result) => {
+      getDefaultIgnores().forEach((ignore) => expect(result.includes(ignore)).toBeFalsy());
+    });
   });
 });
