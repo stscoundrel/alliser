@@ -1,10 +1,17 @@
 const DEFAULT_IGNORES = [
   '.git',
   '.github',
-  'node_modules',
 ];
 
-export const getDefaultIgnores = (): string[] => DEFAULT_IGNORES;
+const VENDOR_IGNORES = [
+  'node_modules',
+  'bower_components',
+  'vendor',
+];
+
+const IGNORES = [...DEFAULT_IGNORES, ...VENDOR_IGNORES];
+
+export const getDefaultIgnores = (): string[] => IGNORES;
 
 export const doesNotContainIgnores = (
   path: string,

@@ -12,4 +12,11 @@ describe('Alliser ignore tests', () => {
     result.forEach((filePath) => expect(filePath.includes('.git')).toBeFalsy());
     result.forEach((filePath) => expect(filePath.includes('.github')).toBeFalsy());
   });
+
+  test('Does not scan common vendor folders', () => {
+    const result = alliser.check(['.ts'], ['./tests/fixtures/vendors']);
+
+    // We expect no files to be found here, as its all vendor folders.
+    expect(result.length).toBe(0);
+  });
 });
