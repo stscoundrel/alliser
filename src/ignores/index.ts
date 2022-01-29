@@ -6,6 +6,19 @@ const DEFAULT_IGNORES = [
 
 export const getDefaultIgnores = (): string[] => DEFAULT_IGNORES;
 
+export const doesNotContainIgnores = (
+  path: string,
+  ignores: string[] = getDefaultIgnores(),
+) : boolean => {
+  let isAllowed = true;
+  ignores.forEach((ignore) => {
+    if (path.includes(ignore)) {
+      isAllowed = false;
+    }
+  });
+  return isAllowed;
+};
+
 export default {
   getDefaultIgnores,
 };

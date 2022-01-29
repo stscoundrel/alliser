@@ -4,7 +4,7 @@ import { getDefaultIgnores } from './ignores';
 
 export const check = (extensions: string[], folders: string[]): string[] => {
   const ignores = getDefaultIgnores();
-  const files = finder.listFilesinFolders(folders);
+  const files = finder.listFilesinFolders(folders, ignores);
 
   return filterByExtensions(files, extensions, ignores);
 };
