@@ -1,6 +1,6 @@
 {
   "name": "alliser",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "description": "Detect & list not allowed file extensions in a project.",
   "repository": "https://github.com/stscoundrel/alliser.git",
   "author": "stscoundrel <silvennoinen.sampo@gmail.com>",
